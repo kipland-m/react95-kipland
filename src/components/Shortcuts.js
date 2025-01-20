@@ -28,6 +28,14 @@ function Shortcuts({ openExplorer }) {
                 />
                 <div>Media</div>
             </StyledShorcut>
+            <StyledShorcut>
+                <Icon
+                    className="pointer"
+                    name="blank_screen_100"
+                    onClick={() => openExplorer()}
+                />
+                <div>Terminal</div>
+            </StyledShorcut>
         </div>
     )
 }

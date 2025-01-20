@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaMedium } from 'react-icons/fa'
+import contactData from '../../data/contact.json';
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter} from 'react-icons/fa'
 
-const Icons = { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaMedium };
+const Icons = { FaLinkedin, FaGithub, FaInstagram, FaTwitter};
 
 
 const StyledItem = styled.li`
@@ -15,12 +16,14 @@ const StyledLink = styled.a`
     color: black;
 `
 
-function Contact({ content }) {
+function Contact() {
+    const { content } = contactData;
     const { email, emailText, socialText, social } = content;
+
     const mailto = `mailto:${email}`;
     return (
         <div>
-            <h2>Let's have a chat!</h2>
+            <h2>Reach out!</h2>
             <p>{emailText}<a href={mailto}>{email}</a></p>
             <p>{socialText}</p>
             <ul>
