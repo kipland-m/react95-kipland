@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import projectData from '../../data/projects.json';
 
 const StyledLink = styled.a`
     margin-bottom: 10px;
@@ -7,8 +8,10 @@ const StyledLink = styled.a`
     font-size: 1.1em;
 `
 
-function Projects({ content }) {
+function Projects() {
+    const { content } = projectData;
     const { projects } = content;
+
     return (
         <div>
             <h2>Projects</h2>

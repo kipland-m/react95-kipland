@@ -1,0 +1,9 @@
+{
+  "id": "about",
+  "name": "About.txt",
+  "icon": "info_bubble",
+  "content": {
+    "paragraphs": ["About me here!"]
+  }
+}
+

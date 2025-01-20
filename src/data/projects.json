@@ -1,0 +1,26 @@
+{
+  "id": "projects",
+  "name": "Projects.txt",
+  "icon": "flying_through_space_100",
+  "projectRepo": "https://github.com/kipland-m/react95-kipland",
+  "react95Repo": "https://github.com/React95/React95",
+  "content": {
+    "projects": [
+      {
+        "title": "PZ Portal",
+        "description": "desc",
+        "myRole": "role",
+        "techStack": "stack",
+        "url": "https://github.com/kipland-m/react95-kipland"
+      },
+      {
+        "title": "title",
+        "description": "desc",
+        "myRole": "role",
+        "techStack": "stack",
+        "url": "https://github.com/kipland-m/react95-kipland"
+      }
+    ]
+  }
+}
+

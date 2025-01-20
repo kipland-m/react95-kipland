@@ -1,6 +1,6 @@
 export default class DataService {
   _data = {
-    projectRepo: 'https://github.com/kipland-m/react95-portfolio',
+    projectRepo: 'https://github.com/kipland-m/react95-kipland',
     react95Repo: 'https://github.com/React95/React95',
     items: [
       {
