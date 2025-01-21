@@ -1,0 +1,6 @@
+{
+  "name": "react95-kipland",
+  "private": true,
+  "workspaces": ["rebuild", "stable-template"]
+}
+
