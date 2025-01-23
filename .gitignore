@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/rebuild/node_modules
+/stable-template/node_modules
 /.pnp
 .pnp.js
 
