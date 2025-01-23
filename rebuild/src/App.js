@@ -28,6 +28,7 @@ function App() {
     <Centered>
       <img src={logo} alt="Windows 95 logo" style={{ width: 200 }} />
       <Button>Start</Button>
+
       <Taskbar />
     </Centered>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ClippyProvider } from '@react95/clippy';
+import { DataProvider } from './utils/context';
 
 import './styles/index.css';
 import App from './App';
@@ -8,9 +9,11 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+    <DataProvider>
     <ClippyProvider>
       <App />
     </ClippyProvider>
+    </DataProvider>
 );
 
 // If you want your app to work offline and load faster, you can change
