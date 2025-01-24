@@ -3,7 +3,8 @@ import DataService from './data.js';
 
 // Initializing Data Service
 const DataContext = createContext();
-const dataService = new DataService(); 
+
+const dataService = new DataService(); // Create an instance of DataService
 
 export const DataProvider = ({ children }) => {
   return (

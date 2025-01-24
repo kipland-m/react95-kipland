@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { TaskBar, List } from '@react95/core';
+import { WindowsExplorer } from '@react95/icons';
 import DataContext from '../utils/context.js';
 import styled from 'styled-components';
 
@@ -16,17 +17,16 @@ function Taskbar() {
 
   console.log(projectRepo, react95Repo)
   return (
-      <TaskBar
-          list={
-            <List>
-              <List.Item className="pointer" icon="brush">
-                <Link href={react95Repo} target="_blank">Built with React95</Link>
-              </List.Item>
-              <List.Divider />
-              <List.Item className="pointer" icon="folder_file">
-                  <Link href={projectRepo} target="_blank">Repo</Link>
-              </List.Item>
-            </List>
+      <TaskBar list={
+          <List>
+            <List.Item icon={<WindowsExplorer variant="16x16_4" />}>
+              <Link href={react95Repo}>Built with React95</Link>
+            </List.Item>
+            <List.Divider />
+            <List.Item>
+                <Link href={projectRepo}>This repo</Link>
+            </List.Item>
+          </List>
           }
       />
   )
