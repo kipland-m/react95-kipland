@@ -1,24 +1,23 @@
 import Webamp from 'webamp';
 
 const startWebamp = () => {
+  const Webamp = window.Webamp;
+  const webamp = new Webamp({
+      initialTracks: [{
+          metaData: {
+              artist: "Drexciya",
+              title: "Hi-Tide"
+          },
+          url: `${process.env.PUBLIC_URL}/drexciya-hi-tide.mp3`,
+      }]
+  });
 
-    if (Webamp.browserIsSupported()) {
-      const webamp = new Webamp({
-          initialTracks: [{
-              metaData: {
-                  artist: "Drexciya",
-                  title: "Hi-Tide"
-              },
-              url: `${process.env.PUBLIC_URL}/drexciya-hi-tide.mp3`,
-          }]
-      });
+  webamp.onClose(() => {
+      webamp.dispose();
+  })
 
-      webamp.onClose(() => {
-          webamp.dispose();
-      })
-
-      webamp.renderWhenReady(document.getElementById('winamp-container'));
-    }
+  webamp.renderWhenReady(document.getElementById('winamp-container'));
 }
 
-export { startWebamp } 
+
+export default startWebamp;

@@ -7,10 +7,10 @@ const Wrapper = styled.div`
     left: 10%;
 `
 
-function Player() {
+function Winamp() {
     return (
         <Wrapper id="winamp-container"></Wrapper>
-    )
+    );
 }
 
-export default Player
+export default Winamp; 

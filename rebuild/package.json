@@ -15,7 +15,8 @@
     "react-scripts": "5.0.1",
     "react95": "^4.0.0",
     "styled-components": "^5.3.11",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webamp": "0.0.0-next-bd2022a8"
   },
   "scripts": {
     "start": "react-scripts start",
