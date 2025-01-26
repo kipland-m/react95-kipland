@@ -7,6 +7,7 @@ import startWebamp from '../utils/shortcut-handlers/webamp.js';
 const ShortcutWrapper = styled.div`
   cursor: pointer;
   padding: 10px;
+  padding-left 15px;
   &:hover {
     opacity: 30%;
   }
