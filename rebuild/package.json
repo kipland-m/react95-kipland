@@ -7,7 +7,6 @@
     "@react95/core": "^9.2.1",
     "@react95/icons": "^2.1.1",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@xstyled/styled-components": "^3.8.1",
     "react": "^17.0.0",

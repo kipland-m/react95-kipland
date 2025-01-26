@@ -9,9 +9,6 @@ function Desktop(){
   // here we will render icons- or 'shortcuts'
   return (
     <React.Fragment>
-        <div>
-          icon be here
-        </div>
       <Shortcuts />
       <Winamp />
     </React.Fragment>
