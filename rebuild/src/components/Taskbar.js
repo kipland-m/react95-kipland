@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { TaskBar, List } from '@react95/core';
 import { WindowsExplorer, FolderOpen } from '@react95/icons';
 import DataContext from '../utils/context.js';

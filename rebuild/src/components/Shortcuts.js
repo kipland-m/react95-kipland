@@ -18,6 +18,13 @@ const IconWrapper = styled.div`
 function Shortcuts({ openExplorer }) {
   return ( 
     <div>
+      <ShortcutWrapper onClick={ openExplorer }>
+        <IconWrapper>
+          <WindowsExplorer variant="32x32_4" />
+        </IconWrapper>
+          Explorer 
+      </ShortcutWrapper>
+
       <ShortcutWrapper onClick={ startWebamp }>
         <IconWrapper>
           <MediaCd variant="32x32_4" />
