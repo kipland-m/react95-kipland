@@ -1,3 +1,9 @@
+/*
+ * This file will contain all static data to use across the site
+ *
+ * For example, all text data for the 'programs' will be stored here.
+ *
+ * */
 export default class DataService {
   data = {
     projectRepo: "https://github.com/kipland-m/react95-kipland",

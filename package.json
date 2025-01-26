@@ -1,6 +1,11 @@
 {
   "name": "react95-kipland",
   "private": true,
-  "workspaces": ["rebuild", "stable-template"]
+  "workspaces": [
+    "rebuild",
+    "stable-template"
+  ],
+  "dependencies": {
+    "@react95/icons": "^2.1.1"
+  }
 }
-

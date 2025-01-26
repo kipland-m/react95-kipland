@@ -3,9 +3,13 @@ import DataContext from '../utils/context.js';
 
 function Desktop(){
   const data = useContext(DataContext);
-  <div>
-    icon be here
+
+  // here we will render icons- or 'shortcuts'
+  return (
+    <div>
+      icon be here
     </div>
+  );
 }
 
 export default Desktop;

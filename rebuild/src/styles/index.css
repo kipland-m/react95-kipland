@@ -2,9 +2,17 @@ html,
 body,
 #root {
   height: 100%;
+  background-color: #00807F;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Ensures TaskBar is at the bottom */
 }

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { TaskBar, List } from '@react95/core';
-import { WindowsExplorer } from '@react95/icons';
+import { WindowsExplorer, FolderOpen } from '@react95/icons';
 import DataContext from '../utils/context.js';
 import styled from 'styled-components';
 
 const Link = styled.a`
     text-decoration: none;
     color: inherit;
-`
+`;
 
 function Taskbar() {
   const { 
@@ -15,21 +15,22 @@ function Taskbar() {
     react95Repo 
   } = useContext(DataContext).getProjectInfo(); 
 
-  console.log(projectRepo, react95Repo)
   return (
-      <TaskBar list={
+      <TaskBar 
+        list={
           <List>
-            <List.Item icon={<WindowsExplorer variant="16x16_4" />}>
+            <List.Item icon={<WindowsExplorer variant="32x32_4" />}>
               <Link href={react95Repo}>Built with React95</Link>
             </List.Item>
             <List.Divider />
-            <List.Item>
-                <Link href={projectRepo}>This repo</Link>
+            <List.Item icon={<FolderOpen variant="32x32_4" />}>
+              <Link href={projectRepo}>This repo</Link>
             </List.Item>
           </List>
-          }
+        }
       />
-  )
+  );
 }
 
 export default Taskbar;
+

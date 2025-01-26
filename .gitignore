@@ -4,6 +4,10 @@
 /node_modules
 /rebuild/node_modules
 /stable-template/node_modules
+
+package-lock.json
+/rebuild/package-lock.json
+/stable-template/package-lock.json
 /.pnp
 .pnp.js
 

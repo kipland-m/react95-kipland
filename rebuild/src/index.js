@@ -1,19 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { ClippyProvider } from '@react95/clippy';
 import { DataProvider } from './utils/context';
 
 import './styles/index.css';
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-    <DataProvider>
+ReactDOM.render(
+  <React.StrictMode>
+  <DataProvider>
     <ClippyProvider>
-      <App />
+    <App />
     </ClippyProvider>
-    </DataProvider>
+  </DataProvider>
+  </React.StrictMode>,
+
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
