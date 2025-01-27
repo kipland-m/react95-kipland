@@ -31,7 +31,6 @@ function Shortcuts({ openExplorer }) {
           <FlyingThroughSpace100 variant="32x32_4" />
         </IconWrapper>
           Terminal 
-          Explorer 
       </ShortcutWrapper>
 
       <ShortcutWrapper onClick={ startWebamp }>
