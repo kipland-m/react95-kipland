@@ -1,8 +1,7 @@
 import Webamp from 'webamp';
 
 const startWebamp = () => {
-  const Webamp = window.Webamp;
-  const webamp = new Webamp({
+  const webamp = new window.Webamp({
       initialTracks: [{
           metaData: {
               artist: "Drexciya",

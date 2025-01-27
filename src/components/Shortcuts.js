@@ -19,7 +19,6 @@ const IconWrapper = styled.div`
 function Shortcuts({ openExplorer }) {
   return ( 
     <div>
-
       <ShortcutWrapper onClick={ openExplorer }>
         <IconWrapper>
           <WindowsExplorer variant="32x32_4" />
@@ -32,6 +31,7 @@ function Shortcuts({ openExplorer }) {
           <FlyingThroughSpace100 variant="32x32_4" />
         </IconWrapper>
           Terminal 
+          Explorer 
       </ShortcutWrapper>
 
       <ShortcutWrapper onClick={ startWebamp }>
