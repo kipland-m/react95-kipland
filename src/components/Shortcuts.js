@@ -26,12 +26,18 @@ function Shortcuts({ openExplorer }) {
           Explorer
       </ShortcutWrapper>
 
+      <ShortcutWrapper onClick={ openExplorer }>
+        <IconWrapper>
+          <WindowsExplorer variant="32x32_4" />
+        </IconWrapper>
+          Example 
+      </ShortcutWrapper>
+
       <ShortcutWrapper onClick={ startWebamp }>
         <IconWrapper>
           <FlyingThroughSpace100 variant="32x32_4" />
         </IconWrapper>
           Terminal 
-          Explorer 
       </ShortcutWrapper>
 
       <ShortcutWrapper onClick={ startWebamp }>
