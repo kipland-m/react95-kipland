@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { WindowsExplorer, MediaCd } from '@react95/icons';
+import { WindowsExplorer, MediaCd, FlyingThroughSpace100 } from '@react95/icons';
 import startWebamp from '../utils/shortcut-handlers/webamp.js';  
 
 
 const ShortcutWrapper = styled.div`
   cursor: pointer;
   padding: 10px;
+  padding-left 15px;
   &:hover {
     opacity: 30%;
   }
@@ -22,6 +23,14 @@ function Shortcuts({ openExplorer }) {
         <IconWrapper>
           <WindowsExplorer variant="32x32_4" />
         </IconWrapper>
+          Explorer
+      </ShortcutWrapper>
+
+      <ShortcutWrapper onClick={ startWebamp }>
+        <IconWrapper>
+          <FlyingThroughSpace100 variant="32x32_4" />
+        </IconWrapper>
+          Terminal 
           Explorer 
       </ShortcutWrapper>
 
@@ -31,8 +40,8 @@ function Shortcuts({ openExplorer }) {
         </IconWrapper>
           Winamp
       </ShortcutWrapper>
-    </div>
 
+    </div>
   );
 }
 
