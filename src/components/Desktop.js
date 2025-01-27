@@ -11,9 +11,10 @@ function Desktop(){
 
   useEffect(
     () => {
-      toggleExplorerOpen(true);
+      toggleExplorerOpen(false);
     }, [data]);
-
+  
+  // move these modal toggle functions to utils?
   const closeExplorer = () => {
     toggleExplorerOpen(false);
   };
@@ -22,6 +23,8 @@ function Desktop(){
   };
 
   // here we will render icons- or 'shortcuts'
+  // we do not have to handle the winamp shortcut in the same way,
+  // because all the opening and closing is handled by the library itself. 
   return (
     <React.Fragment>
       <Shortcuts openExplorer={openExplorer}/>
@@ -29,7 +32,7 @@ function Desktop(){
         <Explorer closeExplorer={closeExplorer} />
         )
       }
-          
+      
       <Winamp />
     </React.Fragment>
   );
