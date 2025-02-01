@@ -10,6 +10,11 @@ body {
   padding: 0;
 }
 
+.xterm {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 14px !important;
+}
+
 .App {
   flex: 1;
   display: flex;
