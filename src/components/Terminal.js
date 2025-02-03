@@ -6,18 +6,14 @@ import { FlyingThroughSpace100 } from '@react95/icons';
 import 'xterm/css/xterm.css';
  
  const TerminalWrapper = styled.div`
-  width: 600px;  
+  width: 588px;  
   height: 355px; 
-  padding-right: 20px;
-  padding-bottom: 10px;
-  color: #00FF00; 
   overflow: hidden;
 `;
 
 const Terminal = () => {
   const terminalRef = useRef(null);
-  const [terminal, toggleOpenTerminal] = useState(true);
-  const closeTerminal = () => toggleOpenTerminal(false);
+  const [terminalOpen, toggleOpenTerminal] = useState(true);
 
   useEffect(() => {
     const terminal = new XTerm({
@@ -32,14 +28,18 @@ const Terminal = () => {
     });
     terminal.open(terminalRef.current);
 
-    terminal.write('Hello from xterm.js!\r\n');
+    terminal.write('hi');
+
+    terminal.onKey(({ key }) => {
+      terminal.write(key);
+    });
 
     return () => terminal.dispose();
   }, []);
 
   return <>
 
-  { terminal && (
+  { terminalOpen && (
   <Modal dragOptions={{
     defaultPosition: {
       x: 120,
@@ -50,13 +50,13 @@ const Terminal = () => {
     icon={<FlyingThroughSpace100 variant="16x16_4" />} 
     title="Terminal" 
     titleBarOptions={[<Modal.Minimize key="minimize" />,
-    <TitleBar.Close key="close" onClick={closeTerminal}/>
+    <TitleBar.Close key="close" onClick={() => toggleOpenTerminal(false)}/>
     ]}
   >
-      <Modal.Content>
-
-        <TerminalWrapper ref={terminalRef} />
-
+      <Modal.Content boxShadow="$in" bgColor="black">
+        <TerminalWrapper>
+            <div ref={terminalRef} style={{ width: '100%', height: '100%' }} />
+        </TerminalWrapper>
       </Modal.Content>
     </Modal>
   )}
