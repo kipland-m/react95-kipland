@@ -28,7 +28,7 @@ const Terminal = () => {
     });
     terminal.open(terminalRef.current);
 
-    terminal.write('hi');
+    terminal.write('welcome to the terminal. it does not work correctly yet.\n');
 
     terminal.onKey(({ key }) => {
       terminal.write(key);

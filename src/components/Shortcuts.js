@@ -25,13 +25,6 @@ function Shortcuts({ openExplorer, openTerminal }) {
           Explorer
       </ShortcutWrapper>
 
-      <ShortcutWrapper onClick={ openExplorer }>
-        <IconWrapper>
-          <WindowsExplorer variant="32x32_4" />
-        </IconWrapper>
-          Example 
-      </ShortcutWrapper>
-
       <ShortcutWrapper onClick={ openTerminal }>
         <IconWrapper>
           <FlyingThroughSpace100 variant="32x32_4" />
