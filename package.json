@@ -17,7 +17,8 @@
     "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4",
     "webamp": "0.0.0-next-bd2022a8",
-    "xterm": "^5.3.0"
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0"
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
