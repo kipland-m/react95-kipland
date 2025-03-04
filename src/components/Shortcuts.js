@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { WindowsExplorer, MediaCd, FlyingThroughSpace100 } from '@react95/icons';
+import { WindowsExplorer, MediaCd, FlyingThroughSpace100, FileText } from '@react95/icons';
 import startWebamp from '../utils/shortcut-handlers/winamp.js';  
 
 const ShortcutWrapper = styled.div`
@@ -15,7 +15,7 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 `
 
-function Shortcuts({ openExplorer, openTerminal }) {
+function Shortcuts({ openExplorer, openTerminal, openResume }) {
   return ( 
     <div>
       <ShortcutWrapper onClick={ openExplorer }>
@@ -23,6 +23,13 @@ function Shortcuts({ openExplorer, openTerminal }) {
           <WindowsExplorer variant="32x32_4" />
         </IconWrapper>
           Explorer
+      </ShortcutWrapper>
+
+      <ShortcutWrapper onClick={ openResume }>
+        <IconWrapper>
+          <FileText variant="32x32_4"/>
+        </IconWrapper>
+          Resume
       </ShortcutWrapper>
 
       <ShortcutWrapper onClick={ openTerminal }>
