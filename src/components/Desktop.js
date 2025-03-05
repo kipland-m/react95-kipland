@@ -21,10 +21,10 @@ function Desktop(){
   const closeTerminal = () => toggleTerminalOpen(false); 
   const openTerminal = () => toggleTerminalOpen(true); 
 
-  useEffect(
-    () => {
-      toggleExplorerOpen(false);
-    }, [data]);
+//  useEffect(
+//    () => {
+//      toggleExplorerOpen(true);
+//    }, [data]);
   
   // here we will render icons- or 'shortcuts'
   // we do not have to handle the winamp shortcut in the same way,
@@ -37,7 +37,7 @@ function Desktop(){
         )
       }
       { isTerminalOpen && (
-        <Terminal closeTerminal={closeExplorer} />
+        <Terminal closeTerminal={closeTerminal} />
         )
       }
       { isResumeOpen && (

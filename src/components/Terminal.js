@@ -6,8 +6,8 @@ import { FlyingThroughSpace100 } from '@react95/icons';
 import 'xterm/css/xterm.css';
  
  const TerminalWrapper = styled.div`
-  width: 588px;  
-  height: 355px; 
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 `;
 
@@ -17,21 +17,24 @@ const Terminal = () => {
 
   useEffect(() => {
     const terminal = new XTerm({
-      fontSize: 14,  
-      fontFamily: 'Fira Code, monospace', 
-      lineHeight: 1, 
       theme: {
-        background: '#000000', 
+        background: '#000000',
         foreground: '#00FF00',
-        cursor: '#FFFFFF', 
+        cursor: '#FFFFFF',
       },
     });
+
     terminal.open(terminalRef.current);
 
-    terminal.write('welcome to the terminal. it does not work correctly yet.\n');
+    terminal.write('welcome to the terminal.\r\n> ');
 
-    terminal.onKey(({ key }) => {
-      terminal.write(key);
+    terminal.onKey(({ key, domEvent }) => {
+      if (domEvent.key === 'Enter') {
+        terminal.write('\r\n');
+        terminal.write('> ');
+      } else {
+        terminal.write(key);
+      }
     });
 
     return () => terminal.dispose();

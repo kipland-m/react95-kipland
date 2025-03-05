@@ -9,6 +9,12 @@ const Link = styled.a`
     color: inherit;
 `;
 
+const TaskBarContainer = styled.div`
+    & * {
+        font-size: 14px;
+    }
+`;
+
 function Taskbar() {
   const { 
     projectRepo,
@@ -16,6 +22,7 @@ function Taskbar() {
   } = useContext(DataContext).getProjectInfo(); 
 
   return (
+    <TaskBarContainer>
       <TaskBar 
         list={
           <List>
@@ -29,6 +36,7 @@ function Taskbar() {
           </List>
         }
       />
+    </TaskBarContainer>
   );
 }
 

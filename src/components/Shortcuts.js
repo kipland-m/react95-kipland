@@ -4,6 +4,7 @@ import { WindowsExplorer, MediaCd, FlyingThroughSpace100, FileText } from '@reac
 import startWebamp from '../utils/shortcut-handlers/winamp.js';  
 
 const ShortcutWrapper = styled.div`
+  font-size: 14px;
   cursor: pointer;
   padding-top: 15px;
   padding-left: 15px;
@@ -15,16 +16,17 @@ const IconWrapper = styled.div`
   margin-right: 10px;
 `
 
+// Putting this here in case I revisit the explorer 'program'
+//      <ShortcutWrapper onClick={ openExplorer }>
+//        <IconWrapper>
+//          <WindowsExplorer variant="32x32_4" />
+//        </IconWrapper>
+//          Explorer
+//      </ShortcutWrapper>
+
 function Shortcuts({ openExplorer, openTerminal, openResume }) {
   return ( 
     <div>
-      <ShortcutWrapper onClick={ openExplorer }>
-        <IconWrapper>
-          <WindowsExplorer variant="32x32_4" />
-        </IconWrapper>
-          Explorer
-      </ShortcutWrapper>
-
       <ShortcutWrapper onClick={ openResume }>
         <IconWrapper>
           <FileText variant="32x32_4"/>
