@@ -9,9 +9,6 @@ import 'xterm/css/xterm.css';
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 0;
-  margin: 0;
-  font-variant-ligatures: none; 
 `;
 
 const Terminal = () => {
@@ -20,8 +17,6 @@ const Terminal = () => {
 
   useEffect(() => {
     const terminal = new XTerm({
-      fontSize: 14,
-      fontFamily: 'Consolas, "Courier New", monospace',
       theme: {
         background: '#000000',
         foreground: '#00FF00',
@@ -36,7 +31,6 @@ const Terminal = () => {
     terminal.onKey(({ key, domEvent }) => {
       if (domEvent.key === 'Enter') {
         terminal.write('\r\n');
-        // ... command logic ...
         terminal.write('> ');
       } else {
         terminal.write(key);
