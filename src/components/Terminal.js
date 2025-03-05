@@ -11,7 +11,7 @@ import 'xterm/css/xterm.css';
   overflow: hidden;
 `;
 
-const Terminal = () => {
+const Terminal = ({isTerminalOpen, closeTerminal}) => {
   const terminalRef = useRef(null);
   const [terminalOpen, toggleOpenTerminal] = useState(true);
 
@@ -53,7 +53,7 @@ const Terminal = () => {
     icon={<FlyingThroughSpace100 variant="16x16_4" />} 
     title="Terminal" 
     titleBarOptions={[<Modal.Minimize key="minimize" />,
-    <TitleBar.Close key="close" onClick={() => toggleOpenTerminal(false)}/>
+    <TitleBar.Close key="close" onClick={closeTerminal}/>
     ]}
   >
       <Modal.Content boxShadow="$in" bgColor="black">

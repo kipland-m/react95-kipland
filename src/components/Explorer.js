@@ -8,14 +8,12 @@ const ContentWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-function Explorer() {
-    const [explorer, toggleOpenExplorer] = React.useState(true);
-    const closeExplorer = () => toggleOpenExplorer(false); // start defining handler functions like this
+function Explorer({closeExplorer, isExplorerOpen}) {
     
     // <> denotes a React.Fragment
     return <>
 
-    { explorer && (
+    { isExplorerOpen && (
     <Modal dragOptions={{
       defaultPosition: {
         x: 120,

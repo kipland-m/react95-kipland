@@ -33,15 +33,15 @@ function Desktop(){
     <React.Fragment>
       <Shortcuts openExplorer={openExplorer} openTerminal={openTerminal} openResume={openResume}/>
       { isExplorerOpen && (
-        <Explorer closeExplorer={closeExplorer} />
+        <Explorer isExplorerOpen={isExplorerOpen} closeExplorer={closeExplorer}/>
         )
       }
       { isTerminalOpen && (
-        <Terminal closeTerminal={closeTerminal} />
+        <Terminal isTerminalOpen={isTerminalOpen} closeTerminal={closeTerminal} />
         )
       }
       { isResumeOpen && (
-        <Resume closeResume={closeResume} />
+        <Resume isResumeOpen={isResumeOpen} closeResume={closeResume} />
         )
       }
       

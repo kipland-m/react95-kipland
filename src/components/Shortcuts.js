@@ -27,6 +27,13 @@ const IconWrapper = styled.div`
 function Shortcuts({ openExplorer, openTerminal, openResume }) {
   return ( 
     <div>
+      <ShortcutWrapper onClick={ openExplorer }>
+        <IconWrapper>
+          <WindowsExplorer variant="32x32_4" />
+        </IconWrapper>
+          Explorer
+      </ShortcutWrapper>
+
       <ShortcutWrapper onClick={ openResume }>
         <IconWrapper>
           <FileText variant="32x32_4"/>
