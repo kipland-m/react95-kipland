@@ -23,14 +23,10 @@ const JobAccomplishments = styled.ul`
   flex-direction: column;
 `
 
-function Resume() {
-    const [explorer, toggleOpenExplorer] = React.useState(true);
-    const closeExplorer = () => toggleOpenExplorer(false); // start defining handler functions like this
-    
-    // <> denotes a React.Fragment
+function Resume({isResumeOpen, closeResume}) {
     return <>
 
-    { explorer && (
+    { isResumeOpen && (
       <Modal dragOptions={{
         defaultPosition: {
           x: 120,
@@ -41,7 +37,7 @@ function Resume() {
       icon={<FileText variant="16x16_4" />} 
       title="Kip's Resume" 
       titleBarOptions={[<Modal.Minimize key="minimize" />,
-      <TitleBar.Close key="close" onClick={closeExplorer} />
+      <TitleBar.Close key="close" onClick={closeResume} />
         ]}>
 
         <Modal.Content boxShadow="$in" bgColor="white">
