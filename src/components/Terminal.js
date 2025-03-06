@@ -9,6 +9,9 @@ import 'xterm/css/xterm.css';
   width: 100%;
   height: 100%;
   overflow: hidden;
+  & * {
+  font-family: 'Courier New', monospace !important;
+}
 `;
 
 const Terminal = ({isTerminalOpen, closeTerminal}) => {
@@ -16,6 +19,8 @@ const Terminal = ({isTerminalOpen, closeTerminal}) => {
 
   useEffect(() => {
     const terminal = new XTerm({
+      rendererType: 'dom',
+      fontFamily: 'Courier New, monospace',
       theme: {
         background: '#000000',
         foreground: '#00FF00',
