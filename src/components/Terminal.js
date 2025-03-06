@@ -9,14 +9,18 @@ import 'xterm/css/xterm.css';
   width: 100%;
   height: 100%;
   overflow: hidden;
+  & * {
+  font-family: 'Courier New', monospace !important;
+}
 `;
 
 const Terminal = ({isTerminalOpen, closeTerminal}) => {
   const terminalRef = useRef(null);
-  const [terminalOpen, toggleOpenTerminal] = useState(true);
 
   useEffect(() => {
     const terminal = new XTerm({
+      rendererType: 'dom',
+      fontFamily: 'Courier New, monospace',
       theme: {
         background: '#000000',
         foreground: '#00FF00',
@@ -42,14 +46,14 @@ const Terminal = ({isTerminalOpen, closeTerminal}) => {
 
   return <>
 
-  { terminalOpen && (
+  { isTerminalOpen && (
   <Modal dragOptions={{
     defaultPosition: {
       x: 120,
       y: 120
     },
   }} 
-    width="600px" height="400px" 
+    width="600px" 
     icon={<FlyingThroughSpace100 variant="16x16_4" />} 
     title="Terminal" 
     titleBarOptions={[<Modal.Minimize key="minimize" />,

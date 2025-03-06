@@ -6,10 +6,12 @@ import startWebamp from '../utils/shortcut-handlers/winamp.js';
 const ShortcutWrapper = styled.div`
   font-size: 14px;
   cursor: pointer;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-left: 15px;
+  width: fit-content;
   &:hover {
     opacity: 30%;
+    transform: translateX(2px);
   }
 `
 const IconWrapper = styled.div`
@@ -27,13 +29,6 @@ const IconWrapper = styled.div`
 function Shortcuts({ openExplorer, openTerminal, openResume }) {
   return ( 
     <div>
-      <ShortcutWrapper onClick={ openExplorer }>
-        <IconWrapper>
-          <WindowsExplorer variant="32x32_4" />
-        </IconWrapper>
-          Explorer
-      </ShortcutWrapper>
-
       <ShortcutWrapper onClick={ openResume }>
         <IconWrapper>
           <FileText variant="32x32_4"/>
