@@ -13,7 +13,6 @@ import 'xterm/css/xterm.css';
 
 const Terminal = ({isTerminalOpen, closeTerminal}) => {
   const terminalRef = useRef(null);
-  const [terminalOpen, toggleOpenTerminal] = useState(true);
 
   useEffect(() => {
     const terminal = new XTerm({
@@ -42,14 +41,14 @@ const Terminal = ({isTerminalOpen, closeTerminal}) => {
 
   return <>
 
-  { terminalOpen && (
+  { isTerminalOpen && (
   <Modal dragOptions={{
     defaultPosition: {
       x: 120,
       y: 120
     },
   }} 
-    width="600px" height="400px" 
+    width="600px" 
     icon={<FlyingThroughSpace100 variant="16x16_4" />} 
     title="Terminal" 
     titleBarOptions={[<Modal.Minimize key="minimize" />,

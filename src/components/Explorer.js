@@ -9,8 +9,6 @@ const ContentWrapper = styled.div`
 `
 
 function Explorer({closeExplorer, isExplorerOpen}) {
-    
-    // <> denotes a React.Fragment
     return <>
 
     { isExplorerOpen && (

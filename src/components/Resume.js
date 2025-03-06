@@ -33,7 +33,7 @@ function Resume({isResumeOpen, closeResume}) {
           y: 120
           },
         }} 
-      width="600px" height="400px" 
+      width="600px"  
       icon={<FileText variant="16x16_4" />} 
       title="Kip's Resume" 
       titleBarOptions={[<Modal.Minimize key="minimize" />,
