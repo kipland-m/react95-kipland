@@ -52,11 +52,11 @@ function Resume({isResumeOpen, closeResume}) {
             </JobDetails>
             
             <JobAccomplishments>
-      <li>Built scalable backend services with FastAPI and Flask, powering web apps for 5+ clients with 99.9% uptime.</li>
-      <li>Enhanced React frontend functionality, improving user workflows and authentication processes.</li>
-      <li>Rebuilt authentication workflows using AWS Cognito, ensuring secure access for 100+ users.</li>
-      <li>Optimized MongoDB queries, reducing data retrieval time by 15%.</li>
-      <li>Designed CI/CD pipelines, cutting deployment errors by 25%.</li>
+<li>Developed scalable back-end services using FastAPI and Flask to power web applications supporting multiple clients.</li>
+<li>Extended front-end functionality in React, enhancing user workflows for both standard and authentication-related processes.</li>
+<li>Rebuilt and streamlined authentication workflows using AWS Cognito, ensuring secure user access and API interaction across applications.</li>
+<li>Leveraged MongoDB for efficient data storage and retrieval, and built query libraries for clear, optimized database operations across multiple collections.</li>
+<li>Designed and implemented CI/CD pipelines, accelerating delivery cycles and reducing deployment errors.</li>
             </JobAccomplishments>
 
             <JobDetails>
@@ -70,9 +70,10 @@ function Resume({isResumeOpen, closeResume}) {
         Systems Integration Specialist, Bluegrass Supply Chain
             </JobDetails>            
             <JobAccomplishments>
-        <li>Developed a Flask API to connect 10+ data sources, streamlining data transformation into Excel.</li>
-        <li>Integrated 10+ customers into WMS, reducing onboarding time by 20%.</li>  
-        <li>Created AutoCAD floor plans, improving warehouse space utilization by 30%.</li>  
+<li>Designed and implemented Python-based data solutions, developing an API with Flask to handle connecting to many data sources and clients to clean, transform and display data into Excel supporting a team of over 15 accountants.</li>
+<li>Successfully integrated new customers into warehouse management systems. Handled API configuration for order systems.</li>
+<li>Utilized AutoCAD to create precise floor plans, optimizing warehouse layouts and significantly improving space utilization.</li>
+
             </JobAccomplishments>
 
             <JobDetails>

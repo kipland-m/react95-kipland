@@ -9,9 +9,6 @@ import 'xterm/css/xterm.css';
   width: 100%;
   height: 100%;
   overflow: hidden;
-  & * {
-  font-family: 'Courier New', monospace !important;
-}
 `;
 
 const Terminal = ({isTerminalOpen, closeTerminal}) => {
@@ -30,7 +27,9 @@ const Terminal = ({isTerminalOpen, closeTerminal}) => {
 
     terminal.open(terminalRef.current);
 
-    terminal.write('welcome to the terminal.\r\n> ');
+    terminal.write('welcome to the terminal.\r\n');
+    terminal.write('this implementation doesn\'t render text correctly.\r\n');
+    terminal.write('the awful spacing. it\'s driving me crazy.\r\n> ');
 
     terminal.onKey(({ key, domEvent }) => {
       if (domEvent.key === 'Enter') {
