@@ -11,7 +11,6 @@ const TerminalWrapper = styled.div`
   overflow: hidden;
  & .xterm .xterm-rows span {
     letter-spacing: 0 !important;
-    font-kerning: none !important;
   }
 `;
 
