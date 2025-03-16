@@ -8,6 +8,12 @@ const ContentWrapper = styled.div`
   flex-wrap: wrap;
 `
 
+const ScrollableModalContent = styled(Modal.Content)`
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+`
+
 const ContactInfo = styled.div`
   font-size: 14px;
 `
@@ -46,7 +52,7 @@ function Resume({isResumeOpen, closeResume}) {
       <TitleBar.Close key="close" onClick={closeResume} />
         ]}>
 
-        <Modal.Content boxShadow="$in" bgColor="white">
+        <ScrollableModalContent boxShadow="$in" bgColor="white">
           <Frame as="p" lineHeight="1.1rem">
             <h1>Kipland Melton</h1>
             <ContactInfo>
@@ -101,7 +107,7 @@ function Resume({isResumeOpen, closeResume}) {
             </JobAccomplishments>
 
           </Frame>
-        </Modal.Content>
+        </ScrollableModalContent>
 
       </Modal>
     )}
