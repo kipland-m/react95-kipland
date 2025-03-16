@@ -33,7 +33,7 @@ function Resume({isResumeOpen, closeResume}) {
     const isMobile = window.innerWidth < 768;
 
     const modalWidth = isMobile ? '60%':'600px';
-    const modalHeight = isMobile ? '60%':'220px';
+    const modalHeight = isMobile ? '60%':'600px';
 
     return <>
 
