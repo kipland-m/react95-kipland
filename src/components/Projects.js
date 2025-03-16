@@ -31,7 +31,7 @@ function Projects({closeProjects, isProjectsOpen}) {
     { isProjectsOpen && (
     <Modal dragOptions={{
       defaultPosition: {
-        x: 120,
+        x: 600,
         y: 120
       },
     }} 

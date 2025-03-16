@@ -41,7 +41,7 @@ function Resume({isResumeOpen, closeResume}) {
       <Modal dragOptions={{
         defaultPosition: {
           x: 120,
-          y: 120
+          y: 60
           },
         }} 
       width={modalWidth}
