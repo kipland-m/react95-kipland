@@ -9,6 +9,11 @@ const ContentWrapper = styled.div`
 `
 
 function Explorer({closeExplorer, isExplorerOpen}) {
+    const isMobile = window.innerWidth < 768;
+
+    const modalWidth = isMobile ? '20%':'300px';
+    const modalHeight = isMobile ? 'auto':'220px';
+
     return <>
 
     { isExplorerOpen && (
@@ -18,7 +23,7 @@ function Explorer({closeExplorer, isExplorerOpen}) {
         y: 120
       },
     }} 
-    width="300px" height="220px" 
+    width={modalWidth} height={modalHeight} 
     icon={<ReaderClosed variant="16x16_4" />} 
     title="Local Disk (C:)" 
     titleBarOptions={[<Modal.Minimize key="minimize" />,
