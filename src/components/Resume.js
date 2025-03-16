@@ -32,7 +32,7 @@ const JobAccomplishments = styled.ul`
 function Resume({isResumeOpen, closeResume}) {
     const isMobile = window.innerWidth < 768;
 
-    const modalWidth = isMobile ? '60%':'600px';
+    const modalWidth = isMobile ? '75%':'600px';
     const modalHeight = isMobile ? '60%':'600px';
 
     return <>
