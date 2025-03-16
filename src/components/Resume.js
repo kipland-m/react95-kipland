@@ -24,6 +24,11 @@ const JobAccomplishments = styled.ul`
 `
 
 function Resume({isResumeOpen, closeResume}) {
+    const isMobile = window.innerWidth < 768;
+
+    const modalWidth = isMobile ? '60%':'600px';
+    const modalHeight = isMobile ? '60%':'220px';
+
     return <>
 
     { isResumeOpen && (
@@ -33,7 +38,8 @@ function Resume({isResumeOpen, closeResume}) {
           y: 120
           },
         }} 
-      width="600px"  
+      width={modalWidth}
+      height={modalHeight}
       icon={<FileText variant="16x16_4" />} 
       title="Kip's Resume" 
       titleBarOptions={[<Modal.Minimize key="minimize" />,
