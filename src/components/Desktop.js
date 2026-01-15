@@ -5,31 +5,46 @@ import Terminal from './Terminal.js';
 import Projects from './Projects.js';
 import Explorer from './Explorer.js';
 import Shortcuts from './Shortcuts.js';
-import DataContext from '../utils/context.js';
 
 function Desktop(){
-  const data = useContext(DataContext);
-
   const [isExplorerOpen, toggleExplorerOpen] = useState(false);
-  const closeExplorer = () => toggleExplorerOpen(false);
-  const openExplorer = () => toggleExplorerOpen(true);
-
   const [isResumeOpen, toggleResumeOpen] = useState(false);
+  const [isProjectsOpen, toggleProjectsOpen] = useState(false);
+  const [isTerminalOpen, toggleTerminalOpen] = useState(false);
   const closeResume = () => toggleResumeOpen(false);
   const openResume = () => toggleResumeOpen(true);
-
-  const [isProjectsOpen, toggleProjectsOpen] = useState(false);
   const closeProjects = () => toggleProjectsOpen(false);
   const openProjects = () => toggleProjectsOpen(true);
   
-  const [isTerminalOpen, toggleTerminalOpen] = useState(false);
-  const closeTerminal = () => toggleTerminalOpen(false); 
-  const openTerminal = () => toggleTerminalOpen(true); 
+  const closeExplorer = () => {
+    if (isExplorerOpen) {
+      console.log('Closing Explorer');
+      toggleExplorerOpen(false);
+    }
+  };
+  const openExplorer = () => {
+    if (!isExplorerOpen) {
+      console.log('Opening Explorer');
+      toggleExplorerOpen(true);
+    }
+  };
+  const closeTerminal = () => {
+    if (isTerminalOpen) {
+      console.log('Closing Terminal');
+      toggleTerminalOpen(false);
+    }
+  }; 
+  const openTerminal = () => {
+    if (!isTerminalOpen) {
+      console.log('Opening Terminal');
+      toggleTerminalOpen(true);
+    }
+  }; 
 
-//  useEffect(
-//    () => {
-//      toggleExplorerOpen(true);
-//    }, [data]);
+  //  useEffect(
+  //    () => {
+  //      toggleExplorerOpen(true);
+  //    }, [data]);
   
   // here we will render icons- or 'shortcuts'
   // we do not have to handle the winamp shortcut in the same way,
